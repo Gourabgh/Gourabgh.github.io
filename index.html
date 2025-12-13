@@ -3,32 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Gourab Ghosh | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-        header { background: #333; color: #fff; padding: 1rem; text-align: center; }
-        .container { padding: 2rem; max-width: 800px; margin: auto; }
-        .project { border: 1px solid #ddd; padding: 1rem; margin-bottom: 1rem; border-radius: 5px; }
-        footer { text-align: center; padding: 1rem; background: #eee; margin-top: 2rem; }
+        /* --- RESET & BASICS --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        a { text-decoration: none; color: inherit; }
+        
+        /* --- HEADER --- */
+        header {
+            background-color: #2c3e50; /* Professional Dark Blue */
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.2rem; opacity: 0.8; font-weight: 300; }
+
+        /* --- CONTAINER --- */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* --- SECTIONS --- */
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            padding-bottom: 5px;
+        }
+
+        /* --- ACADEMIC BADGE --- */
+        .badge {
+            background-color: #e1ecf4;
+            color: #2c3e50;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* --- SKILLS GRID --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .skill-item {
+            background: #fafafa;
+            padding: 1rem;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+        }
+
+        /* --- PROJECT CARDS --- */
+        .project-card {
+            border: 1px solid #eee;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            transition: transform 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+        .btn:hover { background-color: #2980b9; }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>[Gourab Ghosh]</h1>
-        <p>Developer | C Programmer | Problem Solver</p>
+        <h1>Gourab Ghosh</h1>
+        <p>Mathematics Student | Computational Logic | C Programmer</p>
     </header>
+
     <div class="container">
-        <h2>About Me</h2>
-        <p>I am a student passionate about low-level coding and web technologies.</p>
         
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1: Portfolio Site</h3>
-            <p>Built with HTML, CSS, and deployed via Git.</p>
-        </div>
+        <section>
+            <h2>About Me</h2>
+            <p>
+                I am a B.Sc Mathematics student (2nd Year / 3rd Semester) at <strong>Ranaghat College</strong>. 
+                I combine strong mathematical foundations with computational problem-solving. My focus is on low-level programming (C) and algorithm efficiency.
+            </p>
+            <div class="badge">Student ID: B.Sc/24/0297</div>
+            <div class="badge">Session: 2024-2025</div>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <strong>C Programming</strong><br>
+                    <small>Data Structures, Pointers, Algorithms</small>
+                </div>
+                <div class="skill-item">
+                    <strong>Mathematics</strong><br>
+                    <small>Calculus, Linear Algebra, Logic</small>
+                </div>
+                <div class="skill-item">
+                    <strong>Tools</strong><br>
+                    <small>VS Code, Git, GitHub</small>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>My Projects</h2>
+            
+            <div class="project-card">
+                <h3>🔢 C Practice Repository</h3>
+                <p>A collection of C programs covering Semester 3 syllabus, including matrix operations, pattern printing, and logic problems.</p>
+                <a href="https://github.com/Gourabgh/Gourab Ghosh.github.io/tree/main/C_Practice" class="btn" target="_blank">View Code</a>
+            </div>
+
+            <div class="project-card">
+                <h3>📱 Mobile Tech Analysis</h3>
+                <p>Technical analysis of hardware specs (iQOO series) and software optimization logic.</p>
+                <a href="#" class="btn" style="background-color: #7f8c8d;">Coming Soon</a>
+            </div>
+
+        </section>
+
+        <section style="text-align: center;">
+            <h2>Get In Touch</h2>
+            <p>Open for academic collaboration and coding projects.</p>
+            <br>
+            <a href="mailto:gourabghosh4910@gmail.com" class="btn">Email Me</a>
+        </section>
+
     </div>
+
     <footer>
-        <p>Contact: your.email@example.com</p>
+        &copy; 2025 Gourab Ghosh. Hosted on GitHub Pages.
     </footer>
+
 </body>
 </html>
